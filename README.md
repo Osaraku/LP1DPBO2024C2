@@ -12,3 +12,5 @@ dan tambahan untuk bahasa PHP ada atribut tambahan yaitu
 - Foto
 
 Program ini memiliki fitur menambah, mengubah, dan menghapus data.
+## Desain Program
+Program terdiri dari 2 file, yaitu file untuk kelas dan main. Dimana file kelas berisi kelas Dpr merupakan kelas yang berisi data anggota DPR, terdiri dari atribut id, nama, bidang dan partai dengan hak akses private bertujuan agar atribut tersebut tidak bisa diakses dari luar class. Pada kelas Dpr terdapat method setter dan getter untuk setiap atribut pada kelas tersebut. Hak akses untuk setiap method adalah public, supaya semua method dapat diakses diluar kelas (kelas main).
