@@ -46,10 +46,10 @@ Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
 ![Java program](Java/Screenshot/4.PNG)
 
 ### Dokumentasi Python
-![Python program](PY/Screenshot/1.PNG)
-![Python program](PY/Screenshot/2.PNG)
-![Python program](PY/Screenshot/3.PNG)
-![Python program](PY/Screenshot/4.PNG)
+![Python program](Python/Screenshot/1.PNG)
+![Python program](Python/Screenshot/2.PNG)
+![Python program](Python/Screenshot/3.PNG)
+![Python program](Python/Screenshot/4.PNG)
 
 ### Dokumentasi PHP
 ![PHP program](PHP/Screenshot/1.png)
