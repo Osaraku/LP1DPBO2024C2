@@ -20,10 +20,31 @@ Program terdiri dari 2 file, yaitu file untuk kelas dan main. Dimana file kelas 
 ## Alur Program
 Untuk menjalankan programnya, pilih terlebih dahulu bahasa yang akan digunakan lalu run programnya
 
-Pada program terdapat 5 pilihan menu, antara lain :
+Pada program ini terdapat 5 pilihan menu, antara lain :
 * `Tambah` digunakan untuk menambah data anggota DPR
 * `Ganti` digunakan untuk mengubah data anggota DPR
 * `Hapus` digunakan untuk menghapus data anggota DPR
 * `Tampil` digunakan untuk menampilkan tabel data anggota DPR 
 * `Keluar` digunakan untuk keluar dari program
+
+Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
+* ketika ingin menambah data, maka Id harus unik
+* ketika ingin mengubah data, maka Id yang dipilih harus ada, jika tidak ada Id, maka data tidak dapat di ubah
+* ketika ingin menghapus data, menggunakan Id, jika tidak ada Id yang terdaftar maka data tidak bisa dihapus
+
+## Dokumentasi
+### Dokumentasi PHP
+![PHP program](PHP/ss/1.png)
+![PHP program](PHP/ss/2.png)
+![PHP program](PHP/ss/3.png)
+
+### Dokumentasi CPP
+![CPP program](CPP/ss.png)
+
+### Dokumentasi Java
+![Java program](Java/ss.png)
+
+### Dokumentasi Python
+![Python program](PY/ss.png)
+![Python program](PY/ss2.png)
 
