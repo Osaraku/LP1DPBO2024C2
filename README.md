@@ -2,7 +2,7 @@
 ## Janji
 Saya Muhamad Tio Ariyanto [2201718] mengerjakan soal Latihan Praktikum 1 dalam mata kuliah DPBO untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 ## Deskripsi Program
-Program berbasis OOP menggunakan bahasa pemrograman C++, Java, Python, dan PHP yang menampilkan informasi daftar anggota DPR (sekumpulan objek anggota DPR). Didalam class Mahasiswa memiliki 4 Atribut, yaitu :
+Program berbasis OOP menggunakan bahasa pemrograman C++, Java, Python, dan PHP yang menampilkan informasi daftar anggota DPR (sekumpulan objek anggota DPR). Didalam class DPR memiliki 4 Atribut, yaitu :
 - Id
 - Nama
 - Bidang
@@ -10,3 +10,5 @@ Program berbasis OOP menggunakan bahasa pemrograman C++, Java, Python, dan PHP y
 
 dan tambahan untuk bahasa PHP ada atribut tambahan yaitu
 - Foto
+
+Program ini memiliki fitur menambah, mengubah, dan menghapus data.
