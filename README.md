@@ -34,7 +34,7 @@ Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
 
 ## Dokumentasi
 ### Dokumentasi CPP
-![CPP program](CPP/Screenshot/1.png)
+![CPP program](CPP/Screenshot/1.PNG)
 ![CPP program](CPP/Screenshot/2.png)
 ![CPP program](CPP/Screenshot/3.png)
 ![CPP program](CPP/Screenshot/4.png)
