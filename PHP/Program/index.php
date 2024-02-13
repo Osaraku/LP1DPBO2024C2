@@ -5,8 +5,10 @@ dalam mata kuliah DPBO untuk keberkahanNya saya tidak melakukan kecurangan
 seperti yang telah dispesifikasikan. Aamiin
 */
 
+// Memanggil class
 require('Dpr.php');
 
+// Menambahkan data
 $dpr1 = new Dpr("21", "Dicky Harun", "Kesehatan", "Nasdem", "<img src='../Foto/1.jpeg' width='40' height='70'>");
 $dpr2 = new Dpr("32", "Ir. Iswara", "Pertahanan", "Golkar", "<img src='../Foto/2.jpeg' width='40' height='70'>");
 $dpr3 = new Dpr("43", "Biben Fikriana", "Pertanian", "Gerindra", "<img src='../Foto/3.png' width='40' height='70'>");
@@ -17,6 +19,7 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
 
 ?>
 
+<!-- Membuat file html untuk menampilkan tabel -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +28,7 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Praktikum</title>
 
+    <!-- style pada tabel -->
     <style>
         table,
         th,
@@ -37,6 +41,7 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
 </head>
 
 <body>
+    <!-- Menampilkan tabel -->
     <h3>List Anggota DPR : </h3>
     <table class="table" bored>
         <thead>
@@ -78,22 +83,24 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
     </table>
 
     <?php
+    // Mengubah salah satu data
     $ubahId = "54";
     $ketemu = 0;
 
     foreach ($listDpr as $dpr) {
-        //mencari anggota dengan Id
+        //  Ubah data sesuai kebutuhan
         if ($dpr->getId() == $ubahId) {
-            //jika ketemu
             $dpr->setBidang("Kebudayaan");
             $dpr->setPartai("PDIP");
             $ketemu = 1;
 
+            // Notif berhasil
             echo "<br>";
             echo "Data anggota dengan Id <i> (" . $dpr->getId() . ") </i> telah diubah!";
             echo "<br>";
         }
     }
+    // Notif tidak ketemu
     if ($ketemu == 0) {
         echo "<br>";
         echo "Tidak ada anggota DPR dengan Id <i> (" . $ubahId . ") </i>";
@@ -101,6 +108,7 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
     }
     ?>
 
+    <!-- menampilkan tabel -->
     <h3>List Anggota DPR : </h3>
     <table class="table" bored>
         <thead>
@@ -142,25 +150,27 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
     </table>
 
     <?php
+    // Manghapus salah satu data
     $hapusId = "43";
     $ketemu = 0;
     $i = 0;
     $tempId = null;
 
+    // Mencari data yang akan dihapus
     while ($i < count($listDpr) && $ketemu == 0) {
-        //mencari anggota dengan Id
         if ($listDpr[$i]->getId() == $hapusId) {
-            //jika ketemu
             $tempId = $listDpr[$i]->getId();
             unset($listDpr[$i]);
             $ketemu = 1;
 
+            // Notif berhasil
             echo "<br>";
             echo "Data anggota dengan Id <i> (" . $tempId . ") </i> telah dihapus!";
             echo "<br>";
         }
         $i++;
     }
+    /// Notif gagal
     if ($ketemu == 0) {
         echo "<br>";
         echo "Tidak ada anggota DPR dengan Id <i> (" . $tempId . ") </i>";
@@ -168,6 +178,7 @@ $listDpr = array($dpr1, $dpr2, $dpr3, $dpr4);
     }
     ?>
 
+    <!-- menampilkan tabel -->
     <h3>List Anggota DPR : </h3>
     <table class="table" bored>
         <thead>
