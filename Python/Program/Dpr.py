@@ -2,18 +2,22 @@
 # dalam mata kuliah DPBO untuk keberkahanNya saya tidak melakukan kecurangan
 # seperti yang telah dispesifikasikan. Aamiin
 
+# kelas DPR
 class Dpr:
+    # Atribut
     __noId = ""
     __name = ""
     __bidang = ""
     __partai = ""
 
+    # Constructor
     def __init__(self, noId = "", name = "", bidang = "", partai = ""):
         self.__noId = noId
         self.__name = name
         self.__bidang = bidang
         self.__partai = partai
 
+    # Method set dan get
     def get_noId(self):
         return self.__noId
 

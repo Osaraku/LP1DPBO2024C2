@@ -2,15 +2,19 @@
 # dalam mata kuliah DPBO untuk keberkahanNya saya tidak melakukan kecurangan
 # seperti yang telah dispesifikasikan. Aamiin
 
+# Import kelas
 from Dpr import Dpr
 
+# Inisisasi
 listDPR = []
 masukan = 0
 
+# Tampilan awal
 print("+--------------------------+")
 print("| Welcome to DPR Database! |")
 print("+--------------------------+")
 
+# Menampilkan menu selama blum keluar
 while (masukan != 5):
     print("\nPilih angka untuk memasukkan perintah : ")
     print("1. Tambah anggota DPR")
@@ -19,11 +23,13 @@ while (masukan != 5):
     print("4. Tampilkan list anggota DPR")
     print("5. Keluar dari aplikasi")
 
+    # pilih menu
     masukan = int(input("Angka yang dipilih : "))
     
-    if (masukan == 1):
-        n = int(input("\nMasukan banyaknya anggota yang ditambah : "))
+    if (masukan == 1): #jika pilih tambah data
+        n = int(input("\nMasukan banyaknya anggota yang ditambah : ")) # minta banyak data yang akan ditambah
 
+        # menambah data
         for i in range (n):
             print("\nPenambahan ke-" + str(i+1) + " : ")
             noId = str(input("Id : "))
@@ -32,15 +38,18 @@ while (masukan != 5):
             partai = str(input("Partai : "))
 
             listDPR.append(Dpr(noId, name, bidang, partai))
+        # notf berhasil
         print("\nAnggota telah ditambahkan!")
 
-    elif(masukan == 2):
-        noId = str(input("\nMasukan id anggota yang akan diubah : "))
+    elif(masukan == 2): # jika pilih ubah data
+        noId = str(input("\nMasukan id anggota yang akan diubah : ")) # pilih id yang akan diubah
         
+        # cari id yang diubah
         ketemu = 0
         i = 0
         while(ketemu == 0 and i < len(listDPR)):
             if(noId == listDPR[i].get_noId()):
+                # ubah data
                 print("\nMasukan perubahan data!")
                 noId = str(input("Id : "))
                 name = str(input("Nama : "))
@@ -51,19 +60,23 @@ while (masukan != 5):
                 listDPR[i].set_bidang(bidang)
                 listDPR[i].set_partai(partai)
                 
+                # notif berhasil
                 print("\nData anggota telah berhasil diubah!")
                 ketemu == 1
             i += 1
 
+        # notif tidak ketemu datanya
         if (ketemu == 0):
             print("\nTidak ada anggota DPR dengan Id tersebut!")
     
-    elif(masukan == 3):
-        noId = str(input("\nMasukan id anggota yang akan dihapus : "))
+    elif(masukan == 3): # jika pilih ubah data
+        noId = str(input("\nMasukan id anggota yang akan dihapus : ")) # pilih id yang akan dihapus
         
+        # caari id yang akan dihapus
         ketemu = 0
         i = 0
         while(ketemu == 0 and i < len(listDPR)):
+            # hapus data
             if(noId == listDPR[i].get_noId()):
                 del listDPR[i]
                 print("\nData anggota telah berhasil hapus!")
@@ -73,13 +86,16 @@ while (masukan != 5):
         if ketemu == 0:
             print("\nTidak ada anggota DPR dengan Id tersebut!")
 
-    elif(masukan == 4):
+    elif(masukan == 4): # jika memilih menampilkan data
         print("\nList Anggota DPR : ")
+        
+        # panjang kolom
         colLength_1 = 2
         colLength_2 = 4
         colLength_3 = 6
         colLength_4 = 6
 
+        # mencari kolom terpanjang
         for dpr in listDPR:
             if(len(dpr.get_noId()) > colLength_1):
                 colLength_1 = len(dpr.get_noId())
@@ -93,6 +109,7 @@ while (masukan != 5):
             if(len(dpr.get_partai()) > colLength_4):
                 colLength_4 = len(dpr.get_partai())
 
+        # Membuat header tabel
         print("+", end="")
         for i in range(colLength_1 + 2):
             print("-", end="")
@@ -135,6 +152,7 @@ while (masukan != 5):
             print("-", end="")
         print("+")
 
+        # Menampilkan isi tabel
         for dpr in listDPR:
             print("| " + dpr.get_noId(), end=" ")
             if len(dpr.get_noId()) < colLength_1:
@@ -168,10 +186,10 @@ while (masukan != 5):
                 print("-", end="")
             print("+")
     
-    elif(masukan == 5):
+    elif(masukan == 5): # Jika memilih keluar dari program
         print("+--------------------+")
         print("| See you next time! |")
         print("+--------------------+")
 
-    else:
+    else: # jika inputan salah
         print("Inputan yang anda masukkan salah!")
