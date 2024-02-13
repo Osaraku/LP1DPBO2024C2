@@ -35,18 +35,22 @@ Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
 ## Dokumentasi
 ### Dokumentasi CPP
 ![CPP program](CPP/Screenshot/1.PNG)
-![CPP program](CPP/Screenshot/2.png)
-![CPP program](CPP/Screenshot/3.png)
-![CPP program](CPP/Screenshot/4.png)
+![CPP program](CPP/Screenshot/2.PNG)
+![CPP program](CPP/Screenshot/3.PNG)
+![CPP program](CPP/Screenshot/4.PNG)
 
 ### Dokumentasi Java
-![Java program](Java/ss.png)
+![Java program](Java/Screenshot/1.PNG)
+![Java program](Java/Screenshot/2.PNG)
+![Java program](Java/Screenshot/3.PNG)
+![Java program](Java/Screenshot/4.PNG)
 
 ### Dokumentasi Python
-![Python program](PY/ss.png)
-![Python program](PY/ss2.png)
+![Python program](PY/Screenshot/1.PNG)
+![Python program](PY/Screenshot/2.PNG)
+![Python program](PY/Screenshot/3.PNG)
+![Python program](PY/Screenshot/4.PNG)
 
 ### Dokumentasi PHP
-![PHP program](PHP/ss/1.png)
-![PHP program](PHP/ss/2.png)
-![PHP program](PHP/ss/3.png)
+![PHP program](PHP/Screenshot/1.png)
+![PHP program](PHP/Screenshot/2.png)
