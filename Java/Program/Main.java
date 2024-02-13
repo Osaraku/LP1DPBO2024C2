@@ -22,6 +22,7 @@ public class Main {
 
         input = 0;
         while (input != 5) {
+            System.out.println();
             System.out.println("Pilih angka untuk memasukkan perintah : ");
             System.out.println("1. Tambah anggota DPR");
             System.out.println("2. Ubah anggota DPR");
@@ -36,14 +37,15 @@ public class Main {
                 n = sc.nextInt();
 
                 for (i = 0; i < n; i++) {
+                    System.out.println();
                     System.out.println("Penambahan ke-" + Integer.toString(i + 1));
-                    System.out.println("Id : ");
+                    System.out.print("Id : ");
                     id = sc.next();
-                    System.out.println("Nama : ");
+                    System.out.print("Nama : ");
                     name = sc.next();
-                    System.out.println("Bidang : ");
+                    System.out.print("Bidang : ");
                     bidang = sc.next();
-                    System.out.println("Partai : ");
+                    System.out.print("Partai : ");
                     partai = sc.next();
 
                     Dpr temp = new Dpr();
@@ -64,14 +66,15 @@ public class Main {
                 i = 0;
                 while (ketemu == 0 && i < listDPR.size()) {
                     if (id.equals(listDPR.get(i).getId())) {
+                        System.out.println();
                         System.out.println("Masukan perubahan data!");
-                        System.out.println("Id : ");
+                        System.out.print("Id : ");
                         id = sc.next();
-                        System.out.println("Nama : ");
+                        System.out.print("Nama : ");
                         name = sc.next();
-                        System.out.println("Bidang : ");
+                        System.out.print("Bidang : ");
                         bidang = sc.next();
-                        System.out.println("Partai : ");
+                        System.out.print("Partai : ");
                         partai = sc.next();
 
                         listDPR.get(i).setId(id);
@@ -114,6 +117,7 @@ public class Main {
             }
 
             else if (input == 4) {
+                System.out.println();
                 System.out.println("List Anggota DPR :");
                 int colLength_1 = 2;
                 int colLength_2 = 4;
