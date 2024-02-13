@@ -7,5 +7,6 @@ Program berbasis OOP menggunakan bahasa pemrograman C++, Java, Python, dan PHP y
 - Nama
 - Bidang
 - Partai
+
 dan tambahan untuk bahasa PHP ada atribut tambahan yaitu
 - Foto
