@@ -12,7 +12,7 @@ print("| Welcome to DPR Database! |")
 print("+--------------------------+")
 
 while (masukan != 5):
-    print("Pilih angka untuk memasukkan perintah : ")
+    print("\nPilih angka untuk memasukkan perintah : ")
     print("1. Tambah anggota DPR")
     print("2. Ubah anggota DPR")
     print("3. Hapus anggota DPR")
@@ -22,26 +22,26 @@ while (masukan != 5):
     masukan = int(input("Angka yang dipilih : "))
     
     if (masukan == 1):
-        n = int(input("Masukan banyaknya anggota yang ditambah : "))
+        n = int(input("\nMasukan banyaknya anggota yang ditambah : "))
 
         for i in range (n):
-            print("Penambahan ke-" + str(i+1) + " : ")
+            print("\nPenambahan ke-" + str(i+1) + " : ")
             noId = str(input("Id : "))
             name = str(input("Nama : "))
             bidang = str(input("Bidang : "))
             partai = str(input("Partai : "))
 
             listDPR.append(Dpr(noId, name, bidang, partai))
-            print("Anggota telah ditambahkan!")
+        print("\nAnggota telah ditambahkan!")
 
     elif(masukan == 2):
-        noId = str(input("Masukan id anggota yang akan diubah : "))
+        noId = str(input("\nMasukan id anggota yang akan diubah : "))
         
         ketemu = 0
         i = 0
         while(ketemu == 0 and i < len(listDPR)):
             if(noId == listDPR[i].get_noId()):
-                print("Masukan perubahan data!")
+                print("\nMasukan perubahan data!")
                 noId = str(input("Id : "))
                 name = str(input("Nama : "))
                 bidang = str(input("Bidang : "))
@@ -51,30 +51,30 @@ while (masukan != 5):
                 listDPR[i].set_bidang(bidang)
                 listDPR[i].set_partai(partai)
                 
-                print("Data anggota telah berhasil diubah!")
+                print("\nData anggota telah berhasil diubah!")
                 ketemu == 1
             i += 1
 
-        if ketemu == 0:
-            print("Tidak ada anggota DPR dengan Id tersebut!")
+        if (ketemu == 0):
+            print("\nTidak ada anggota DPR dengan Id tersebut!")
     
     elif(masukan == 3):
-        noId = str(input("Masukan id anggota yang akan dihapus : "))
+        noId = str(input("\nMasukan id anggota yang akan dihapus : "))
         
         ketemu = 0
         i = 0
         while(ketemu == 0 and i < len(listDPR)):
             if(noId == listDPR[i].get_noId()):
                 del listDPR[i]
-                print("Data anggota telah berhasil hapus!")
+                print("\nData anggota telah berhasil hapus!")
                 ketemu == 1
             i += 1
 
         if ketemu == 0:
-            print("Tidak ada anggota DPR dengan Id tersebut!")
+            print("\nTidak ada anggota DPR dengan Id tersebut!")
 
     elif(masukan == 4):
-        print("List Anggota DPR : ")
+        print("\nList Anggota DPR : ")
         colLength_1 = 2
         colLength_2 = 4
         colLength_3 = 6
