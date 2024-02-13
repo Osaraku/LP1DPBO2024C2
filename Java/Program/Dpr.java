@@ -4,12 +4,14 @@ dalam mata kuliah DPBO untuk keberkahanNya saya tidak melakukan kecurangan
 seperti yang telah dispesifikasikan. Aamiin
 */
 
+// Kelas DPR
 public class Dpr {
     private String id;
     private String name;
     private String bidang;
     private String partai;
 
+    // Constructor
     public Dpr() {
         this.id = "";
         this.name = "";
@@ -24,6 +26,7 @@ public class Dpr {
         this.partai = partai;
     }
 
+    // Method set den get
     public String getId() {
         return this.id;
     }

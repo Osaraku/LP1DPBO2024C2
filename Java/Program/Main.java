@@ -4,11 +4,13 @@ dalam mata kuliah DPBO untuk keberkahanNya saya tidak melakukan kecurangan
 seperti yang telah dispesifikasikan. Aamiin
 */
 
+// Import kelasyang digunakan
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        // Inisiasi
         int i, j, n, input, ketemu;
         String id, name, bidang, partai;
 
@@ -16,10 +18,12 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        // Tampilan awal
         System.out.println("+--------------------------+");
         System.out.println("| Welcome to DPR Database! |");
         System.out.println("+--------------------------+");
 
+        // Menjalankan program selama belum memilih 5. Keluar dari program
         input = 0;
         while (input != 5) {
             System.out.println();
@@ -32,11 +36,13 @@ public class Main {
             System.out.println("Angka yang dipilih : ");
             input = sc.nextInt();
 
-            if (input == 1) {
-                System.out.println("Berapa banyak anggota yang ditambahkan :");
+            if (input == 1) { // Jika memilih menambahkan data
+                System.out.println("Berapa banyak anggota yang ditambahkan :"); // Meminta banyaknya data yang
+                                                                                // dimasukkan
                 n = sc.nextInt();
 
                 for (i = 0; i < n; i++) {
+                    // Meminta input data yang dimasukkan
                     System.out.println();
                     System.out.println("Penambahan ke-" + Integer.toString(i + 1));
                     System.out.print("Id : ");
@@ -48,6 +54,7 @@ public class Main {
                     System.out.print("Partai : ");
                     partai = sc.next();
 
+                    // Memasukkan ke list
                     Dpr temp = new Dpr();
                     temp.setId(id);
                     temp.setName(name);
@@ -55,17 +62,20 @@ public class Main {
                     temp.setPartai(partai);
                     listDPR.add(temp);
                 }
+                // Notif berhasil
                 System.out.println("Data telah ditambahkan");
             }
 
-            else if (input == 2) {
-                System.out.println("Masukkan Id anggota DPR yang akan diubah : ");
+            else if (input == 2) { // Jika memilih mengubah data
+                System.out.println("Masukkan Id anggota DPR yang akan diubah : "); // meninta id anggota ang diubah
+                                                                                   // datanya
                 id = sc.next();
 
                 ketemu = 0;
                 i = 0;
                 while (ketemu == 0 && i < listDPR.size()) {
                     if (id.equals(listDPR.get(i).getId())) {
+                        // Input perubahan data
                         System.out.println();
                         System.out.println("Masukan perubahan data!");
                         System.out.print("Id : ");
@@ -77,53 +87,62 @@ public class Main {
                         System.out.print("Partai : ");
                         partai = sc.next();
 
+                        // Mengubah data
                         listDPR.get(i).setId(id);
                         listDPR.get(i).setName(name);
                         listDPR.get(i).setBidang(bidang);
                         listDPR.get(i).setPartai(partai);
 
+                        // Notif jika berhasil diubah
                         System.out.println("Data telah diubah!");
                         System.out.println();
                         ketemu = 1;
                     }
                     i++;
                 }
+                // Notif jika data tidak ada
                 if (ketemu == 0) {
                     System.out.println("Tidak ada anggota DPR dengan Id tersebut!");
                     System.out.println();
                 }
             }
 
-            else if (input == 3) {
+            else if (input == 3) { // Jika memilih menghapus data
                 System.out.println("Masukkan Id anggota DPR yang akan dihapus : ");
                 id = sc.next();
 
+                // Mencari id yang diilih lalu dihapus
                 ketemu = 0;
                 i = 0;
                 while (ketemu == 0 && i < listDPR.size()) {
                     if (id.equals(listDPR.get(i).getId())) {
                         listDPR.remove(i);
 
+                        // notif berhasil
                         System.out.println("Data telah dihapus!");
                         System.out.println();
                         ketemu = 1;
                     }
                     i++;
                 }
+                // notif tidak ada id
                 if (ketemu == 0) {
                     System.out.println("Tidak ada anggota DPR dengan Id tersebut!");
                     System.out.println();
                 }
             }
 
-            else if (input == 4) {
+            else if (input == 4) { // Jika memilih menampilkan data
                 System.out.println();
                 System.out.println("List Anggota DPR :");
+
+                // panjang kolom
                 int colLength_1 = 2;
                 int colLength_2 = 4;
                 int colLength_3 = 6;
                 int colLength_4 = 6;
 
+                // cari kolom terpanjang
                 for (i = 0; i < listDPR.size(); i++) {
                     if (listDPR.get(i).getId().length() > colLength_1) {
                         colLength_1 = listDPR.get(i).getId().length();
@@ -139,6 +158,7 @@ public class Main {
                     }
                 }
 
+                // Membuat header
                 System.out.print("+");
                 for (i = 0; i < colLength_1 + 2; i++) {
                     System.out.print("-");
@@ -193,6 +213,7 @@ public class Main {
                 }
                 System.out.println("+");
 
+                // Menampilkan isi tabel
                 for (i = 0; i < listDPR.size(); i++) {
                     System.out.print("| " + listDPR.get(i).getId() + " ");
                     for (j = 0; j < colLength_1 - listDPR.get(i).getId().length(); j++) {
@@ -232,13 +253,13 @@ public class Main {
                 }
             }
 
-            else if (input == 5) {
+            else if (input == 5) { // Jika memilih keluar
                 System.out.println("+--------------------+");
                 System.out.println("| See you next time! |");
                 System.out.println("+--------------------+");
             }
 
-            else {
+            else { // Jika input slah
                 System.out.println("Inputan yang anda masukkan salah!");
             }
         }
