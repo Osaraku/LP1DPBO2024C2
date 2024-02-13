@@ -33,13 +33,11 @@ Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
 * ketika ingin menghapus data, menggunakan Id, jika tidak ada Id yang terdaftar maka data tidak bisa dihapus
 
 ## Dokumentasi
-### Dokumentasi PHP
-![PHP program](PHP/ss/1.png)
-![PHP program](PHP/ss/2.png)
-![PHP program](PHP/ss/3.png)
-
 ### Dokumentasi CPP
-![CPP program](CPP/ss.png)
+![CPP program](CPP/Screenshot/1.png)
+![CPP program](CPP/Screenshot/2.png)
+![CPP program](CPP/Screenshot/3.png)
+![CPP program](CPP/Screenshot/4.png)
 
 ### Dokumentasi Java
 ![Java program](Java/ss.png)
@@ -48,3 +46,7 @@ Program ini mempunyai 1 Primary key, Yaitu Id, Oleh karena itu
 ![Python program](PY/ss.png)
 ![Python program](PY/ss2.png)
 
+### Dokumentasi PHP
+![PHP program](PHP/ss/1.png)
+![PHP program](PHP/ss/2.png)
+![PHP program](PHP/ss/3.png)
